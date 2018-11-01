@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDC-fI-MKl">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDC-fI-MKl" userLabel="Drawing View" customClass="DrawingView" customModule="CreativityProject" customModuleProvider="target">
                                 <rect key="frame" x="39" y="61" width="303" height="481"/>
                                 <color key="backgroundColor" red="0.79822545089999997" green="1" blue="0.76334553920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znM-q7-rhY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znM-q7-rhY">
                                 <rect key="frame" x="135" y="563" width="105" height="30"/>
                                 <state key="normal" title="Change Screen"/>
                                 <connections>
@@ -37,6 +37,7 @@
                             <constraint firstItem="znM-q7-rhY" firstAttribute="top" secondItem="xDC-fI-MKl" secondAttribute="bottom" constant="21" id="elo-3s-E3f"/>
                             <constraint firstItem="xDC-fI-MKl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="g05-Gf-ZeB"/>
                             <constraint firstItem="xDC-fI-MKl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="i06-uk-dkD"/>
+                            <constraint firstItem="znM-q7-rhY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s1O-7h-Y3J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -54,7 +55,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-c0-51R">
-                                <rect key="frame" x="170" y="490" width="34" height="30"/>
+                                <rect key="frame" x="170" y="567" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
