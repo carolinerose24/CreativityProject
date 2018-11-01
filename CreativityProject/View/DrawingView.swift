@@ -19,6 +19,7 @@ public class DrawingView: UIView
         createStickFigure().stroke()
         drawTurtle()
         drawSomething().stroke()
+        drawEyepatch().stroke()
         // Drawing code
      }
  
@@ -81,11 +82,25 @@ public class DrawingView: UIView
         figure1.addLine (to: CGPoint(x: 95, y: 100))
         figure1.addLine (to: CGPoint(x: 95, y: 90))
 
-
-
         return figure1
         
-
+    }
+    
+    private func drawEyepatch() -> UIBezierPath
+    {
+        let figure2 = UIBezierPath()
+        UIColor.black.setStroke()
+        figure2.lineWidth = 3.0
+        
+        
+        figure2.move (to: CGPoint(x: 180, y: 190))
+        figure2.addLine (to: CGPoint(x: 220, y: 190))
+        figure2.move (to: CGPoint(x: 190, y: 190))
+        figure2.addLine (to: CGPoint(x: 190, y: 200))
+        figure2.addLine (to: CGPoint(x: 195, y: 200))
+        figure2.addLine (to: CGPoint(x: 195, y: 190))
+        
+        return figure2
     }
     
     
