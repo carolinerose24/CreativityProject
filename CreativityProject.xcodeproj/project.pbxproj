@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB0CF53C218B3C8A003F59CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0CF53B218B3C8A003F59CE /* AppDelegate.swift */; };
-		AB0CF53E218B3C8A003F59CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0CF53D218B3C8A003F59CE /* ViewController.swift */; };
+		AB0CF53E218B3C8A003F59CE /* CreativityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0CF53D218B3C8A003F59CE /* CreativityViewController.swift */; };
 		AB0CF541218B3C8A003F59CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB0CF53F218B3C8A003F59CE /* Main.storyboard */; };
 		AB0CF543218B3C8E003F59CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB0CF542218B3C8E003F59CE /* Assets.xcassets */; };
 		AB0CF546218B3C8E003F59CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB0CF544218B3C8E003F59CE /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		AB0CF538218B3C8A003F59CE /* CreativityProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreativityProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0CF53B218B3C8A003F59CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AB0CF53D218B3C8A003F59CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB0CF53D218B3C8A003F59CE /* CreativityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityViewController.swift; sourceTree = "<group>"; };
 		AB0CF540218B3C8A003F59CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB0CF542218B3C8E003F59CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB0CF545218B3C8E003F59CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,38 @@
 		AB0CF53A218B3C8A003F59CE /* CreativityProject */ = {
 			isa = PBXGroup;
 			children = (
-				AB0CF53B218B3C8A003F59CE /* AppDelegate.swift */,
-				AB0CF53D218B3C8A003F59CE /* ViewController.swift */,
-				AB0CF53F218B3C8A003F59CE /* Main.storyboard */,
-				AB0CF542218B3C8E003F59CE /* Assets.xcassets */,
-				AB0CF544218B3C8E003F59CE /* LaunchScreen.storyboard */,
-				AB0CF547218B3C8E003F59CE /* Info.plist */,
+				AB0CF54D218B3CF5003F59CE /* Resources */,
+				AB0CF54F218B3D39003F59CE /* Controller */,
+				AB0CF54E218B3D10003F59CE /* View */,
 			);
 			path = CreativityProject;
+			sourceTree = "<group>";
+		};
+		AB0CF54D218B3CF5003F59CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB0CF53B218B3C8A003F59CE /* AppDelegate.swift */,
+				AB0CF542218B3C8E003F59CE /* Assets.xcassets */,
+				AB0CF547218B3C8E003F59CE /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AB0CF54E218B3D10003F59CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB0CF53F218B3C8A003F59CE /* Main.storyboard */,
+				AB0CF544218B3C8E003F59CE /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AB0CF54F218B3D39003F59CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB0CF53D218B3C8A003F59CE /* CreativityViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB0CF53E218B3C8A003F59CE /* ViewController.swift in Sources */,
+				AB0CF53E218B3C8A003F59CE /* CreativityViewController.swift in Sources */,
 				AB0CF53C218B3C8A003F59CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +305,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CreativityProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CreativityProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CreativityProject/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CreativityProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
