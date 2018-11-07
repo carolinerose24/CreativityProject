@@ -83,9 +83,12 @@
                                 </view>
                                 <color key="backgroundColor" red="0.79822545089999997" green="1" blue="0.76334553920000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="9aH-d6-SBx" firstAttribute="height" secondItem="LeV-xC-5d5" secondAttribute="height" id="GRa-7N-Sg3"/>
                                     <constraint firstItem="9aH-d6-SBx" firstAttribute="leading" secondItem="LeV-xC-5d5" secondAttribute="leading" id="J9k-Nf-mhx"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="artImage" destination="9aH-d6-SBx" id="XMa-hY-LUU"/>
+                                    <outlet property="artLabel" destination="o4z-qG-86K" id="RqE-J0-909"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
