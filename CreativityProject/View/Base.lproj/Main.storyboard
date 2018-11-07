@@ -24,9 +24,10 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znM-q7-rhY">
                                 <rect key="frame" x="135" y="563" width="105" height="30"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Change Screen"/>
                                 <connections>
-                                    <segue destination="EY7-mr-ziN" kind="show" id="diE-ac-k1G"/>
+                                    <segue destination="8jB-xB-dqX" kind="show" id="ua2-FY-mih"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,30 +47,39 @@
             </objects>
             <point key="canvasLocation" x="149.59999999999999" y="31.934032983508249"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="AYW-PX-03x">
+        <!--Collection View Controller-->
+        <scene sceneID="xF2-wt-DBf">
             <objects>
-                <viewController id="EY7-mr-ziN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="26J-UP-XXA">
+                <collectionViewController id="8jB-xB-dqX" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ONM-Rv-2vQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-c0-51R">
-                                <rect key="frame" x="170" y="567" width="34" height="30"/>
+                        <color key="backgroundColor" red="0.80685631563800175" green="1" blue="0.98287108387902211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TBy-TN-Qhv">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="artIdentifier" id="LeV-xC-5d5">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="JAK-2V-zhO"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="asz-QK-fRq"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QPj-37-YFQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="8jB-xB-dqX" id="7N7-8P-gJU"/>
+                            <outlet property="delegate" destination="8jB-xB-dqX" id="FzK-rR-ox6"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixa-LW-d7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="959" y="32"/>
+            <point key="canvasLocation" x="930" y="32"/>
         </scene>
     </scenes>
 </document>
