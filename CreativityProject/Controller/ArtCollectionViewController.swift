@@ -103,7 +103,8 @@ public class ArtCollectionViewController: UICollectionViewController
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
-        
+        //indexPath.row = mylist.get in java
+        //! after a variable or return in force unwrap
         
         artCell.backgroundColor = .cyan
         artCell.artImage.image = creativeCS[indexPath.row]
@@ -126,6 +127,17 @@ public class ArtCollectionViewController: UICollectionViewController
         
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section : Int) -> UIEdgeInsets
+    {
+        return sectionInsets
+    }
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section : Int) -> CGFloat
+    {
+        return sectionInsets.left
+    }
+    
     
     
     
