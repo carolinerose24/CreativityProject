@@ -26,13 +26,13 @@ public class ArtCollectionViewController: UICollectionViewController
     {
         return [
             UIImage(named: "Octocat"),
-            UIImage(named: "AppArt11:7"),
+            UIImage(named: "MMSharkImage"),
+            UIImage(named: "MegImage"),
+            UIImage(named: "SantaJaws"),
+            UIImage(named: "ArtApp"),
             UIImage(named: "JavaHaiku"),
             UIImage(named: "MainframeHaiku"),
             UIImage(named: "SwiftHaiku"),
-            UIImage(named: "MMSharkImage"),
-            UIImage(named: "SAImage2"),
-            UIImage(named: "SantaJaws"),
             UIImage(named: "PacemakerHacked"),
 
 
@@ -43,14 +43,14 @@ public class ArtCollectionViewController: UICollectionViewController
     {
         return [
         "My Octocat",
+        "Megashark v Mechashark",
+        "The MEG",
+        "Santa Jaws",
         "App Drawn Art",
         "Haiku to Java",
         "Haiku to Mainframe",
         "Haiku to Swift",
-        "Megashark v Mechashark",
-        "5 Headed Shark Attack",
-        "Santa Jaws",
-        "Pacemaker Hacked"
+        "Pacemaker Hacked",
 
         ]
     }()
@@ -94,11 +94,16 @@ public class ArtCollectionViewController: UICollectionViewController
     }
 
                 //_ means no outside name,          (inside name is collection view)
+  
+    
     public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+
     {
         // #warning Incomplete implementation, return the number of items
         return creativeCS.count
     }
+    
+    
 
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
@@ -106,7 +111,7 @@ public class ArtCollectionViewController: UICollectionViewController
         //indexPath.row = mylist.get in java
         //! after a variable or return in force unwrap
         
-        artCell.backgroundColor = .cyan
+        artCell.backgroundColor = .lightGray
         artCell.artImage.image = creativeCS[indexPath.row]
         artCell.artLabel.text = labels[indexPath.row]
     
