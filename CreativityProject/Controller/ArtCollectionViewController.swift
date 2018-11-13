@@ -4,11 +4,12 @@
 //
 //  Created by Jarman, Caroline on 11/7/18.
 //  Copyright © 2018 ctec. All rights reserved.
-// FIRST MAKE CLASS AND ALL METHODS PUBLIC
+// FIRST MAKE CLASS AND ALL METHODS PUBLIC (func)
 //Queue - lines that can be added to DQ (dequeue) -> deleting the line (from the front)
 //Override -> UICollectionView has a method with the same header, override says to use mine not the default
 //super.__________ -> go up to the parent and do THEIR instructions then do whatever else I said
 
+//reuse identifier ->inflate each time
 import UIKit
 
 private let reuseIdentifier = "artIdentifier"
@@ -19,8 +20,8 @@ public class ArtCollectionViewController: UICollectionViewController
     //MARK: Data members for Creativity Screen
     
     private let sectionInsets = UIEdgeInsets(top : 50.0, left: 20.0, bottom: 50.0, right: 20.0) //gap between items (larger on top/bottom)
-    private let itemsPerRowCompact : CGFloat = 4
-    private let itemsPerRowNormal : CGFloat = 6
+    private let itemsPerRowCompact : CGFloat = 4 //^^sets the edges
+    private let itemsPerRowNormal : CGFloat = 6 //images on screen at a time
     
     private let creativeCS : [UIImage?] =
     {
@@ -31,11 +32,9 @@ public class ArtCollectionViewController: UICollectionViewController
             UIImage(named: "SantaJaws"),
             UIImage(named: "ArtApp"),
             UIImage(named: "JavaHaiku"),
-            UIImage(named: "MainframeHaiku"),
+            UIImage(named: "MainframeHaiku"),   // command Z - undo
             UIImage(named: "SwiftHaiku"),
-            UIImage(named: "PacemakerHacked"),
-
-
+            UIImage(named: "PacemakerHacked"), //if typed in wrong-will just show background (?unwrap optional)
         ]
     }()
     
@@ -51,12 +50,11 @@ public class ArtCollectionViewController: UICollectionViewController
         "Haiku to Mainframe",
         "Haiku to Swift",
         "Pacemaker Hacked",
-
         ]
     }()
 
     //MARK: - Lifecycle
-    
+                        //^^like a java doc
     public override func viewDidLoad() -> Void //life cycle method, always needs view did load-like START for the page
     {
         super.viewDidLoad()
@@ -86,6 +84,7 @@ public class ArtCollectionViewController: UICollectionViewController
     */
 
     // MARK: UICollectionViewDataSource
+    //^^attaching data to it
 
     public override func numberOfSections(in collectionView: UICollectionView) -> Int
     {
@@ -106,10 +105,11 @@ public class ArtCollectionViewController: UICollectionViewController
     
 
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    {
+    {       //dq : taking out of the front of the line (when off screen) --puts them back in when you are back on the screen
         let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
         //indexPath.row = mylist.get in java
         //! after a variable or return in force unwrap
+        //as! converts from background to my Type --my images -->loads picture and text
         
         artCell.backgroundColor = .lightGray
         artCell.artImage.image = creativeCS[indexPath.row]
@@ -126,11 +126,12 @@ public class ArtCollectionViewController: UICollectionViewController
                                layout collectionViewLayout: UICollectionViewLayout,
                                sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        let paddingSpace = sectionInsets.left * (itemsPerRowCompact + 1)
+        
+        let paddingSpace = sectionInsets.left * (itemsPerRowCompact + 1) //minimum spacing
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRowCompact
         
-        return CGSize(width: widthPerItem, height: widthPerItem)
+        return CGSize(width: widthPerItem, height: widthPerItem) //makes it square-needs to be changed to fit nicely
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section : Int) -> UIEdgeInsets
