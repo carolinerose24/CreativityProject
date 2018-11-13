@@ -95,7 +95,7 @@ public class ArtCollectionViewController: UICollectionViewController
 
                 //_ means no outside name,          (inside name is collection view)
   
-    
+                                //_ means it has no name externally
     public override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
 
     {
