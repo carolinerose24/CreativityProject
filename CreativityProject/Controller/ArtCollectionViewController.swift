@@ -29,12 +29,12 @@ public class ArtCollectionViewController: UICollectionViewController
             UIImage(named: "Octocat"),
             UIImage(named: "MMSharkImage"),
             UIImage(named: "MegImage"),
-            UIImage(named: "SantaJaws"),
+            UIImage(named: "SantaJaws2"),
             UIImage(named: "ArtApp"),
             UIImage(named: "JavaHaiku"),
             UIImage(named: "MainframeHaiku"),   // command Z - undo
             UIImage(named: "SwiftHaiku"),
-            UIImage(named: "PacemakerHacked"), //if typed in wrong-will just show background (?unwrap optional)
+    //        UIImage(named: "PacemakerHacked"), //if typed in wrong-will just show background (?unwrap optional)
         ]
     }()
     
@@ -49,7 +49,7 @@ public class ArtCollectionViewController: UICollectionViewController
         "Haiku to Java",
         "Haiku to Mainframe",
         "Haiku to Swift",
-        "Pacemaker Hacked",
+   //     "Pacemaker Hacked",
         ]
     }()
 
